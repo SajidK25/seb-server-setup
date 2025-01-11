@@ -31,7 +31,7 @@ services:
         # SEB Server password, internally used to en-/decrypt sensitive data secure internal communication
         # NOTE: These must match with the other sebserver_password set on other services
         - sebserver_password=${SEBSERVER_PWD}
-
+        - sebserver_init_adminaccount_init_pwd=${SEBSERVER_PWD}
         # Data Base settings
         # NOTE: these must match with the DB connection settings on mariadb service
         - spring_datasource_username=root
