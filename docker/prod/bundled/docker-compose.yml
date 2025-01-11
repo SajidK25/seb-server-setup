@@ -32,6 +32,7 @@ services:
         # NOTE: These must match with the other sebserver_password set on other services
         - sebserver_password=${SEBSERVER_PWD}
         - sebserver_init_adminaccount_gen_on_init=true
+        - sebserver_init_adminaccount_username=sebserver-admin
         # Data Base settings
         # NOTE: these must match with the DB connection settings on mariadb service
         - spring_datasource_username=root
@@ -80,6 +81,7 @@ services:
       - spring_profiles_active=prod
       - sps_webservice_distributed=false
       - sebserver_init_adminaccount_gen_on_init=true
+      - sebserver_init_adminaccount_username=sebserver-admin
 
       # SEB Server password, internally used to en-/decrypt sensitive data secure internal communication
       # NOTE: These must match with the other sebserver_password set on other services
