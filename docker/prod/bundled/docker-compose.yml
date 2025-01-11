@@ -146,8 +146,6 @@ services:
     volumes:
       - ./config/nginx:/etc/nginx/conf.d
       - ./config/nginx/certs:/sebserver/config/certs
-      - ./config/nginx/certs/fullchain.pem:/sebserver/config/certs/fullchain.pem
-      - ./config/nginx/certs/privkey.pem:/sebserver/config/certs/privkey.pem
     ports:
       - ${BASE_PORT}:${BASE_PORT}
       - ${SPS_WEB_PORT}:${SPS_WEB_PORT}
